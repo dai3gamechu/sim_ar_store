@@ -58,7 +58,8 @@ function render(){
  $('budget').value=state.budget;
  document.querySelectorAll('[data-limit]').forEach(el=>{const active=(el.dataset.limit==='on')===state.limitOn;el.classList.toggle('active',active);el.setAttribute('aria-pressed',String(active))});
  $('modeHelp').textContent=state.limitOn?'ON：残りの交換ポイントを超える数量は追加できません。交換済み分は再計算しません。':'OFF：予算を超えて欲しい商品を選び、必要な交換ポイントと不足分を確認できます。';
- $('goalBox').hidden=state.limitOn;$('goalNeed').textContent=fmt(cost)+' pt';$('goalShort').textContent=fmt(Math.max(0,cost-state.budget))+' pt';
+ const boughtCost=items.reduce((s,it)=>s+state.bought[it.id]*it.price,0);
+ $('goalBox').hidden=state.limitOn;$('goalNeed').textContent=fmt(cost)+' pt';$('goalTotal').textContent=fmt(cost+boughtCost)+' pt';$('goalShort').textContent=fmt(Math.max(0,cost-state.budget))+' pt';
  $('warning').innerHTML=left<0?`<div class="warn">⚠️ ポイントが ${fmt(-left)} pt 不足しています。</div>`:'';
  renderCatalog();
  const selected=items.filter(it=>state.plan[it.id]>0);

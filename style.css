@@ -134,35 +134,14 @@ body[data-theme="light"] .store-app .red {color:#be3535;}
 @media(max-width:640px){.store-app{padding:18px 9px 30px;}.store-app .store-heading{flex-direction:column;gap:12px;}.store-app .store-video-link{align-self:flex-start;}.store-app .store-heading h1{font-size:24px;}}
 
 
-/* Journey store identity: teal, carved stone, old-gold. Isolated from Island Store. */
-body[data-theme="dark"]{--st-bg:#101f23;--st-card:#1d3439;--st-border:#446267;--st-text:#edf1e7;--st-muted:#bed0ce;--st-field:#17292e;--st-soft:#263f43;--st-sub:#29484b;--st-accent:#167f80;--st-accent-hover:#1b9697;--st-line:#49666a;--st-blue:#304c58;--st-blue-border:#60818d;--st-orange:#514a33;--st-orange-border:#aa9763;--st-warn:#563331;--st-warntext:#ffbcac}
-body[data-theme="light"]{--st-bg:#e5efeb;--st-card:#f9fcf6;--st-border:#b4c9c0;--st-text:#1c3839;--st-muted:#506b68;--st-field:#fffef9;--st-soft:#eff5ef;--st-sub:#dbe9e1;--st-accent:#147b79;--st-accent-hover:#168f8b;--st-line:#cadbd2;--st-blue:#dce9ee;--st-blue-border:#aec6d0;--st-orange:#f5ecd4;--st-orange-border:#d1b77c;--st-warn:#fbe8e3;--st-warntext:#a72e28}
-body[data-theme]{background:var(--st-bg);background-image:radial-gradient(ellipse 75% 230px at 50% 25px,#28838524,transparent),repeating-linear-gradient(90deg,transparent 0px,transparent 120px,#a8c2af08 121px,transparent 122px)}
-.store-app .store-heading{border-bottom:2px solid #bd9d5b55;padding-bottom:18px}
-.store-app .store-heading h1{font-size:clamp(25px,3vw,34px);letter-spacing:.02em}
-.journey-eyebrow{font-size:11px;letter-spacing:.17em;color:#b5a072;font-weight:800;margin:0 0 8px}
-.journey-titlemark{align-self:center;color:#bca566;font-size:20px;letter-spacing:.12em;white-space:nowrap;opacity:.85}
-.journey-titlemark span{font-size:16px;margin:0 12px}
-.store-app .panel{border-radius:11px;border-top:3px solid #b3a1737e;box-shadow:0 9px 18px #04191d20}
-.store-app .panel h2{font-weight:800}
-.store-app .stat{border-left:3px solid #39938b}
-.store-app .chip.active,.store-app .btn.primary{background:#177d7e;border-color:#37a6a0}
-.store-app .item{border-color:var(--st-border);border-left:3px solid #537f7a}
-.store-app .item.complete{opacity:.78;border-left-color:#8c9991}
-.store-app .itemimg{object-fit:cover;background:#5b543b}
-.store-app .price{color:var(--st-text)}
-.store-app .bought-control>label{color:#8bb7c3}
-.store-app .plan-control>label{color:#cfb075}
-body[data-theme="light"] .store-app .bought-control>label{color:#386575}
-body[data-theme="light"] .store-app .plan-control>label{color:#8a6a28}
-.store-app .bought-control .quantity button{background:#557b88}
-.store-app .plan-control .quantity button{background:#ac8547}
-.store-app .quantity input.count-input{font-size:20px}
-.store-app .modebar{border-left:3px solid #b49a5f}
-.store-app .goalmetric strong{font-size:26px}
-.store-app .green{color:#70d2a8}
-body[data-theme="light"] .store-app .green{color:#167c5c}
-.store-app .switch input{accent-color:#138780}
-.journey-info{margin-top:17px;display:flex;flex-direction:column;gap:4px;padding:10px 12px;background:var(--st-sub);border-radius:8px;border:1px solid var(--st-border);font-size:13px}
-.journey-info strong{color:var(--st-text)}.journey-info span{color:var(--st-muted)}
-@media(max-width:640px){.journey-titlemark{display:none}.store-app .settings{gap:10px}.store-app .item{padding:8px}.store-app .itemcontrols{gap:5px}}
+
+/* Journey-specific page copy, in the same grey light/dark palette as the Island simulator and DLS TOOL HUB. */
+.journey-eyebrow {display:none}
+.journey-titlemark {display:none}
+.store-app .goalgrid {grid-template-columns:repeat(2,minmax(0,1fr))}
+.store-app .goalmetric:nth-child(3) {grid-column:1/-1}
+.store-app .goalmetric strong {font-size:23px}
+.journey-info {margin-top:17px;display:flex;flex-direction:column;gap:4px;padding:10px 12px;background:var(--st-sub);border-radius:8px;border:1px solid var(--st-border);font-size:13px}
+.journey-info strong {color:var(--st-text)}
+.journey-info span {color:var(--st-muted)}
+@media(max-width:640px){.store-app .goalgrid{grid-template-columns:1fr}.store-app .goalmetric:nth-child(3){grid-column:auto}}
