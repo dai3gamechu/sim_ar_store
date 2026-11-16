@@ -145,3 +145,14 @@ body[data-theme="light"] .store-app .red {color:#be3535;}
 .journey-info strong {color:var(--st-text)}
 .journey-info span {color:var(--st-muted)}
 @media(max-width:640px){.store-app .goalgrid{grid-template-columns:1fr}.store-app .goalmetric:nth-child(3){grid-column:auto}}
+
+/* デイリーミッションと同様の「使い方動画」リンク。既存のCSSを変更せずに追加 */
+.store-heading .journey-video-link{display:inline-flex;align-items:center;justify-content:center;gap:14px;flex:0 0 auto;align-self:flex-start;min-height:58px;padding:13px 21px;border:1.5px solid #6798a7;border-radius:12px;background:#344b56;color:#f2f6fa;font-weight:700;font-size:18px;line-height:1.3;font-family:inherit;text-decoration:none;cursor:pointer;white-space:nowrap;transition:background .15s,border-color .15s,transform .15s}
+.store-heading .journey-video-link:hover{background:#426370;border-color:#8cbac7;transform:translateY(-1px)}
+.store-heading .journey-video-link:focus-visible{outline:3px solid #69cbd3;outline-offset:3px}
+.store-heading .journey-video-link .journey-play{font-size:21px;line-height:1}
+.store-heading .journey-video-link .journey-out{font-size:19px;line-height:1}
+@media(max-width:760px){.store-heading{flex-wrap:wrap;gap:12px}.store-heading .journey-video-link{font-size:16px;padding:11px 15px;min-height:48px}}
+/* ライトテーマでもコントラストが保てるようにする */
+[data-dls-initial-theme="light"] .store-heading .journey-video-link,body[data-theme="light"] .store-heading .journey-video-link{background:#e4eef1;color:#284653;border-color:#7aa1ad}
+[data-dls-initial-theme="light"] .store-heading .journey-video-link:hover,body[data-theme="light"] .store-heading .journey-video-link:hover{background:#d1e3e9}
